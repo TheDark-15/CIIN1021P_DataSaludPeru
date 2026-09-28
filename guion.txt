@@ -1,0 +1,64 @@
+QUE TIENE EL REPOSITORIO
+========================
+
+CIIN1021P_DataSaludPeru_REPO.zip incluye:
+
+- 6 archivos SQL (scripts para SQL Server)
+  - Crear la base de datos
+  - Crear las tablas
+  - Procedimientos para meter los datos
+  - Triggers para auditoría
+  - Roles y seguridad
+  - Backup y restore
+
+- 73 capturas de pantalla del trabajo en SQL Server
+  (se ve el código que ejecutamos, los resultados, todo)
+
+- README.md (explicación de qué es todo)
+
+- análisis de problemas de calidad
+  (identificamos que hay:
+   - 150K registros vacíos (NULL)
+   - 45K duplicados
+   - 200K con formato inconsistente
+   - etc)
+
+- Documentos PDF del MINSA (diccionarios de datos)
+
+- .gitignore (para que Git ignore los datos sensibles)
+
+TODO LISTO PARA PRESENTACIÓN HOY
+================================
+
+Mostrar en la presentación:
+1. Abre el ZIP
+2. Muestra 5-10 capturas (la primera y la última son buenas)
+3. Lee el README
+4. Muestra los scripts SQL (están comentados)
+5. Di: "Identif​icamos 400K registros con problemas de calidad"
+
+QUE DECIR (GUION RAPIDO)
+========================
+
+"Hicimos un análisis de los datos del MINSA. Creamos la base de datos 
+DataSaludPerú con tablas para atenciones y afiliados. Identificamos 
+problemas de calidad (nulos, duplicados, formatos raros). 
+
+Implementamos 6 scripts SQL:
+- Crear BD con esquemas separate (prod, audit, dw)
+- Procedimientos con validación (TRY/CATCH)
+- Triggers para auditoría
+- Roles diferenciados (Admin, Analista, Auditor)
+- Backup y restore
+
+Tenemos 73 capturas como evidencia del trabajo en SQL Server.
+Los datos masivos los entregamos por separado (son muy grandes)."
+
+
+NOTAS
+=====
+
+- El ZIP pesa 6.9 MB, fácil de descargar y mandar
+- Los CSVs de datos (1.6 GB) se entregan aparte
+- Los backups SQL están en Google Drive (muy pesados para ZIP)
+- Todo ejecutable, los scripts están listos para correr en SQL Server
