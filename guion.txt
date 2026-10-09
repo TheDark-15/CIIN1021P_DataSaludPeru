@@ -1,64 +1,57 @@
-QUE TIENE EL REPOSITORIO
-========================
+# DataSalud Perú
 
-CIIN1021P_DataSaludPeru_REPO.zip incluye:
+## Proyecto integrador — Bases de Datos Avanzadas y Big Data
 
-- 6 archivos SQL (scripts para SQL Server)
-  - Crear la base de datos
-  - Crear las tablas
-  - Procedimientos para meter los datos
-  - Triggers para auditoría
-  - Roles y seguridad
-  - Backup y restore
+### 1. Descripción
 
-- 73 capturas de pantalla del trabajo en SQL Server
-  (se ve el código que ejecutamos, los resultados, todo)
+DataSalud Perú es un proyecto orientado al análisis de información abierta del Seguro Integral de Salud (SIS), con énfasis en la cobertura de afiliados y la utilización de servicios de salud en la región La Libertad.
 
-- README.md (explicación de qué es todo)
+### 2. Objetivos
 
-- análisis de problemas de calidad
-  (identificamos que hay:
-   - 150K registros vacíos (NULL)
-   - 45K duplicados
-   - 200K con formato inconsistente
-   - etc)
+* Implementar una base de datos relacional en SQL Server.
+* Aplicar automatización, transacciones, auditoría y seguridad mediante T-SQL.
+* Explorar operaciones CRUD y agregaciones con MongoDB.
+* Construir un Data Warehouse dimensional siguiendo la metodología Kimball.
+* Implementar procesos ETL con trazabilidad.
+* Preparar análisis BI y pruebas de procesamiento con Apache Spark.
 
-- Documentos PDF del MINSA (diccionarios de datos)
+### 3. Fuentes de datos
 
-- .gitignore (para que Git ignore los datos sensibles)
+Se utilizan conjuntos de datos abiertos del SIS sobre afiliados activos y atenciones. En el informe se documentan las fuentes, los periodos, los esquemas y los problemas de calidad identificados.
 
-TODO LISTO PARA PRESENTACIÓN HOY
-================================
+### 4. Estructura del repositorio
 
-Mostrar en la presentación:
-1. Abre el ZIP
-2. Muestra 5-10 capturas (la primera y la última son buenas)
-3. Lee el README
-4. Muestra los scripts SQL (están comentados)
-5. Di: "Identif​icamos 400K registros con problemas de calidad"
+* `01_SQL_Server`: scripts de creación, carga, automatización y seguridad.
+* `02_MongoDB`: colecciones, operaciones CRUD, consultas e índices.
+* `03_DataWarehouse_ETL`: modelo dimensional, DDL y procesos ETL.
+* `04_PowerBI`: reportes y evidencias BI.
+* `05_Spark`: scripts, notebooks y resultados de pruebas.
+* `06_Documentacion`: informe, diagramas y evidencias.
 
-QUE DECIR (GUION RAPIDO)
-========================
+### 5. Requisitos
 
-"Hicimos un análisis de los datos del MINSA. Creamos la base de datos 
-DataSaludPerú con tablas para atenciones y afiliados. Identificamos 
-problemas de calidad (nulos, duplicados, formatos raros). 
+* Microsoft SQL Server y SQL Server Management Studio.
+* MongoDB Community Server o MongoDB Compass.
+* Power BI Desktop para la etapa BI.
+* Python y PySpark para la etapa Big Data, según las instrucciones de cada script.
 
-Implementamos 6 scripts SQL:
-- Crear BD con esquemas separate (prod, audit, dw)
-- Procedimientos con validación (TRY/CATCH)
-- Triggers para auditoría
-- Roles diferenciados (Admin, Analista, Auditor)
-- Backup y restore
+### 6. Orden de ejecución
 
-Tenemos 73 capturas como evidencia del trabajo en SQL Server.
-Los datos masivos los entregamos por separado (son muy grandes)."
+1. Revisar las fuentes y los requisitos de cada etapa.
+2. Ejecutar los scripts de SQL Server en el orden indicado.
+3. Ejecutar los scripts de MongoDB.
+4. Crear y cargar las dimensiones y la tabla de hechos del Data Warehouse.
+5. Ejecutar y validar el proceso ETL.
+6. Configurar BI y ejecutar las pruebas Spark cuando sus scripts estén disponibles.
 
+### 7. Trazabilidad
 
-NOTAS
-=====
+Cada etapa debe documentar su fuente, script ejecutado, fecha, cantidad de registros procesados y resultado.
 
-- El ZIP pesa 6.9 MB, fácil de descargar y mandar
-- Los CSVs de datos (1.6 GB) se entregan aparte
-- Los backups SQL están en Google Drive (muy pesados para ZIP)
-- Todo ejecutable, los scripts están listos para correr en SQL Server
+### 8. Seguridad
+
+No se publican credenciales, contraseñas, cadenas de conexión con secretos, datos personales ni copias de seguridad de la base de datos. Los archivos publicados deben revisarse antes de subirlos.
+
+### 9. Estado del proyecto
+
+El estado de cada componente se documentará según su implementación y evidencia de ejecución real. Los componentes pendientes no se presentan como terminados.
