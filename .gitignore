@@ -1,0 +1,122 @@
+# ============================================================================
+# .gitignore - Archivos a ignorar en repositorio Git
+# ============================================================================
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.swn
+*~
+.vscode/
+.idea/
+
+# Archivos temporales
+*.tmp
+*.bak
+*.log
+*.old
+
+# Archivos CSV grandes (NUNCA commitear datos masivos)
+# Dato personal: Ley N.° 29733 - No almacenar datos de pacientes en Git público
+*.csv
+!template_*.csv  # Permitir templates de ejemplo
+
+# Archivos de backup SQL
+*.bak
+*.bak.zip
+D:\Backups\*
+
+# Archivos de credenciales (CRÍTICO)
+*.credentials
+*.key
+*.pem
+secrets.txt
+password.txt
+connection_strings.json
+
+# Notebooks Jupyter (pesar primero)
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Archivos compilados Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+
+# Entornos virtuales Python
+venv/
+ENV/
+env/
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de Excel y Power BI
+*.xlsx
+*.xlsm
+~$*.xlsx
+*.pbix
+.Power BI Models/
+
+# Archivos de sistema SQL Server
+*.mdf
+*.ldf
+*.ndf
+*.sqllog
+
+# Directorios de salida
+output/
+results/
+temp/
+
+# Archivos compilados de Docker
+.dockerignore
+Dockerfile
+
+# git-lfs (Large File Storage) si se usa
+# *.csv filter=lfs diff=lfs merge=lfs -text
+
+# ============================================================================
+# EXCEPCIONES: Archivos que SÍ incluir en repositorio
+# ============================================================================
+
+# Comentarios de ejemplo (descomenta lo que uses)
+!template_atenciones.csv
+!template_afiliados.csv
+!diccionario_datos.md
+!README.md
+
+# ============================================================================
+# NOTA DE SEGURIDAD: LEY N.° 29733
+# ============================================================================
+# Este repositorio NO debe contener:
+# - Datos personales de pacientes
+# - Números de identificación (DNI, RUT, etc.)
+# - Información médica sensible
+# - Credenciales de acceso a sistemas
+#
+# Usar SOLO para:
+# - Scripts SQL de estructura y procedimientos
+# - Documentación técnica
+# - Diagramas de arquitectura
+# - Notebooks de análisis (sin datos reales)
+# ============================================================================

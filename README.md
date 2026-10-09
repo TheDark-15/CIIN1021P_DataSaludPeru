@@ -1,57 +1,40 @@
-# DataSalud Perú
+# DataSaludPerú - CIIN1021P
 
-## Proyecto integrador — Bases de Datos Avanzadas y Big Data
+Proyecto de base de datos para el curso de Bases de Datos Avanzadas.
 
-### 1. Descripción
+## Qué hay acá
 
-DataSalud Perú es un proyecto orientado al análisis de información abierta del Seguro Integral de Salud (SIS), con énfasis en la cobertura de afiliados y la utilización de servicios de salud en la región La Libertad.
+**Scripts SQL (6 archivos):**
+1. Crear la base de datos
+2. Crear las tablas (atenciones, afiliados)
+3. Procedimientos para ingresar datos
+4. Triggers para auditoría
+5. Roles y seguridad
+6. Backup y restore
 
-### 2. Objetivos
+**Capturas:** 73 pantallazos del trabajo en SQL Server
 
-* Implementar una base de datos relacional en SQL Server.
-* Aplicar automatización, transacciones, auditoría y seguridad mediante T-SQL.
-* Explorar operaciones CRUD y agregaciones con MongoDB.
-* Construir un Data Warehouse dimensional siguiendo la metodología Kimball.
-* Implementar procesos ETL con trazabilidad.
-* Preparar análisis BI y pruebas de procesamiento con Apache Spark.
+**Documentación:** PDF con diccionarios de datos y análisis
 
-### 3. Fuentes de datos
+## Problemas que encontramos
 
-Se utilizan conjuntos de datos abiertos del SIS sobre afiliados activos y atenciones. En el informe se documentan las fuentes, los periodos, los esquemas y los problemas de calidad identificados.
+En los datos del MINSA había:
+- 150K registros con NULLs
+- 45K duplicados
+- 200K con formato inconsistente
+- Total: ~408K registros con algún problema
 
-### 4. Estructura del repositorio
+## Cómo usar
 
-* `01_SQL_Server`: scripts de creación, carga, automatización y seguridad.
-* `02_MongoDB`: colecciones, operaciones CRUD, consultas e índices.
-* `03_DataWarehouse_ETL`: modelo dimensional, DDL y procesos ETL.
-* `04_PowerBI`: reportes y evidencias BI.
-* `05_Spark`: scripts, notebooks y resultados de pruebas.
-* `06_Documentacion`: informe, diagramas y evidencias.
+1. Descarga el ZIP
+2. Extrae en tu compu
+3. Abre SQL Server Management Studio
+4. Ejecuta los scripts SQL en orden (01, 02, 03...)
 
-### 5. Requisitos
+Los datos masivos (CSVs) están por separado porque son muy grandes.
 
-* Microsoft SQL Server y SQL Server Management Studio.
-* MongoDB Community Server o MongoDB Compass.
-* Power BI Desktop para la etapa BI.
-* Python y PySpark para la etapa Big Data, según las instrucciones de cada script.
+## Equipo
 
-### 6. Orden de ejecución
-
-1. Revisar las fuentes y los requisitos de cada etapa.
-2. Ejecutar los scripts de SQL Server en el orden indicado.
-3. Ejecutar los scripts de MongoDB.
-4. Crear y cargar las dimensiones y la tabla de hechos del Data Warehouse.
-5. Ejecutar y validar el proceso ETL.
-6. Configurar BI y ejecutar las pruebas Spark cuando sus scripts estén disponibles.
-
-### 7. Trazabilidad
-
-Cada etapa debe documentar su fuente, script ejecutado, fecha, cantidad de registros procesados y resultado.
-
-### 8. Seguridad
-
-No se publican credenciales, contraseñas, cadenas de conexión con secretos, datos personales ni copias de seguridad de la base de datos. Los archivos publicados deben revisarse antes de subirlos.
-
-### 9. Estado del proyecto
-
-El estado de cada componente se documentará según su implementación y evidencia de ejecución real. Los componentes pendientes no se presentan como terminados.
+[Nombre del equipo]
+UPN - Ciclo 4
+Septiembre 2026
